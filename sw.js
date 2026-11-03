@@ -1,4 +1,4 @@
-const CACHE_NAME = 'liftlog-v410-offline-1';
+const CACHE_NAME = 'liftlog-v411-offline-1';
 const CORE = [
   "./",
   "./index.html",
