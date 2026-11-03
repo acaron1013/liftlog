@@ -1,7 +1,8 @@
-const CACHE_NAME = 'liftlog-v48-offline-1';
+const CACHE_NAME = 'liftlog-v410-offline-1';
 const CORE = [
   "./",
   "./index.html",
+  "./assets/exercises/incline-db-fly.webp",
   "./assets/exercises/push-up.webp",
   "./assets/exercises/low-to-high-cable-fly.webp",
   "./assets/exercises/machine-chest-fly.webp",
