@@ -10,7 +10,7 @@
 .photo-placeholder span{font-size:24px}.photo-placeholder small{font-size:10px;line-height:1.2}
 .photo-missing{display:grid;place-items:center;width:70px;height:76px;background:#222b38;border-radius:12px}
 @media(max-width:430px){.photo-hero-grid .exercise-hero{height:190px}}
-</style><style>.library-filters{display:flex;gap:6px;overflow:auto;padding:12px 0}.library-filters button{white-space:nowrap}.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.library-item{display:flex;flex-direction:column;gap:8px;text-align:left;overflow:hidden;min-width:0}.library-item .exercise-thumb,.library-item .photo-placeholder{width:100%;height:118px;object-fit:cover}.library-item strong{display:block;font-size:13px}.library-item small{display:block;font-size:11px;color:#b9bac8;margin-top:4px}.library-item .photo-placeholder small{font-size:9px}@media(min-width:650px){.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}</style></head><body><main class="wrap"><div class="head"><div class="logo">Lift<b>Log</b> <span class="small muted">v4.22 • Flexible Logging & Sync</span></div><div id="sync" class="status">Local mode</div></div><div id="error"></div><nav class="tabs" id="nav"><button data-page="today" class="active">Today</button><button data-page="history">History</button><button data-page="library">Library</button><button data-page="settings">Settings & Sync</button></nav><section id="today"></section><section id="history" class="hidden"></section><section id="library" class="hidden"></section><section id="settings" class="hidden"></section></main><script>
+</style><style>.library-filters{display:flex;gap:6px;overflow:auto;padding:12px 0}.library-filters button{white-space:nowrap}.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.library-item{display:flex;flex-direction:column;gap:8px;text-align:left;overflow:hidden;min-width:0}.library-item .exercise-thumb,.library-item .photo-placeholder{width:100%;height:118px;object-fit:cover}.library-item strong{display:block;font-size:13px}.library-item small{display:block;font-size:11px;color:#b9bac8;margin-top:4px}.library-item .photo-placeholder small{font-size:9px}@media(min-width:650px){.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}</style></head><body><main class="wrap"><div class="head"><div class="logo">Lift<b>Log</b> <span class="small muted">v4.23 • History Controls & Sync</span></div><div id="sync" class="status">Local mode</div></div><div id="error"></div><nav class="tabs" id="nav"><button data-page="today" class="active">Today</button><button data-page="history">History</button><button data-page="library">Library</button><button data-page="settings">Settings & Sync</button></nav><section id="today"></section><section id="history" class="hidden"></section><section id="library" class="hidden"></section><section id="settings" class="hidden"></section></main><script>
 'use strict';
 const SEED=[];
 const TEMPLATES={
@@ -102,14 +102,44 @@ function renderHistory(){
   return `<button class="day ${rs.length?'trained':''} ${rest?'rest-day':''} ${historyDay===d?'active':''}" data-day="${d}" aria-label="${d}: ${kinds.map(k=>k.label).join(', ')|| (rest?'Rest from lifting':'No workout')}"><strong>${i+1}</strong>${badges}</button>`
  })).join('');
  const rs=byDate.get(historyDay)||[];const workouts=[...new Set(rs.map(r=>r.workout))];
- $('history').innerHTML=`<h1>Training calendar</h1><p class="muted small">${data.records.length} exercise records • ${restDays().length} lifting rest days • select a date</p><div class="card"><div class="calendar-head"><button id="prevMonth" aria-label="Previous month">‹</button><strong>${title}</strong><button id="nextMonth" aria-label="Next month">›</button></div><div class="calendar">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>`<span class="weekday">${x}</span>`).join('')}${calendar}</div><div class="calendar-legend"><span class="cal-tag cal-back">BACK</span><span class="cal-tag cal-legs">LEGS</span><span class="cal-tag cal-arms">ARMS</span><span class="cal-tag cal-chest">CHEST</span><span class="cal-tag cal-rest">REST</span></div></div><div class="card"><h2>${historyDay?new Date(historyDay+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}):'Select a day'}</h2>${rs.length?`<p class="muted">${esc(workouts.join(' · '))} • ${rs.length} exercises</p>${rs.map(r=>`<button class="exercise" data-record="${esc(r.id)}">${art(r.exercise)}<span class="grow"><strong>${esc(r.exercise)}</strong><br><span class="small muted">${esc(r.weight)} ${esc(r.unit)} × ${esc(r.reps)}</span></span><span>✎</span></button>`).join('')}`:(historyDay&&restDays().includes(historyDay)?'<p class="muted">💤 Rest from lifting logged.</p>':'<p class="muted">No workout recorded for this date.</p>')}</div><div class="card"><div class="toolbar"><button id="jsonExport">Export JSON</button><button id="csvExport">Export CSV</button></div></div>`;
+ const sessions=workouts.map(workout=>({workout,items:rs.filter(r=>r.workout===workout)}));
+ const sessionMarkup=sessions.map(s=>`<div class="card"><div class="row between"><h2>${esc(s.workout||'Uncategorized workout')}</h2><button class="danger" data-delete-workout="${esc(s.workout||'')}" aria-label="Delete entire ${esc(s.workout)} workout">Delete workout</button></div><p class="muted small">${s.items.length} exercises · deleting this workout removes all of its exercises and sets for ${esc(historyDay)}</p>${s.items.map(r=>{const sets=recordSets(r);return `<div class="history"><div class="row between"><button class="exercise" style="flex:1;min-width:180px" data-record="${esc(r.id)}">${art(r.exercise)}<span class="grow"><strong>${esc(r.exercise)}</strong><br><span class="small muted">${sets.length} sets · tap to edit</span></span><span>✎</span></button><button class="danger" data-delete-id="${esc(r.id)}" aria-label="Delete exercise ${esc(r.exercise)}">Delete exercise</button></div><div class="stack">${sets.map((set,i)=>`<div class="row between" style="padding:4px 8px"><span class="small">Set ${i+1}: ${esc(set.weight)} ${esc(r.unit||'')} × ${esc(set.reps)} reps</span><button data-delete-set="${esc(r.id)}" data-set-index="${i}" aria-label="Delete set ${i+1} from ${esc(r.exercise)}">Delete set</button></div>`).join('')}</div></div>`}).join('')}</div>`).join('');
+ $('history').innerHTML=`<h1>Training calendar</h1><p class="muted small">${data.records.length} exercise records • ${restDays().length} lifting rest days • select a date</p><div class="card"><div class="calendar-head"><button id="prevMonth" aria-label="Previous month">‹</button><strong>${title}</strong><button id="nextMonth" aria-label="Next month">›</button></div><div class="calendar">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>`<span class="weekday">${x}</span>`).join('')}${calendar}</div><div class="calendar-legend"><span class="cal-tag cal-back">BACK</span><span class="cal-tag cal-legs">LEGS</span><span class="cal-tag cal-arms">ARMS</span><span class="cal-tag cal-chest">CHEST</span><span class="cal-tag cal-rest">REST</span></div></div>${historyDay?(sessions.length?sessionMarkup:`<div class="card"><h2>${new Date(historyDay+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}</h2><p class="muted">${restDays().includes(historyDay)?'💤 Rest from lifting logged.':'No workout recorded for this date.'}</p></div>`):'<div class="card"><p class="muted">Select a date to view and manage workouts, exercises, and sets.</p></div>'}<div class="card"><div class="toolbar"><button id="jsonExport">Export JSON</button><button id="csvExport">Export CSV</button></div></div>`;
  $('prevMonth').onclick=()=>{calendarMonth=new Date(year,month-2,1).toISOString().slice(0,7);historyDay=null;render()};
  $('nextMonth').onclick=()=>{calendarMonth=new Date(year,month,1).toISOString().slice(0,7);historyDay=null;render()};
  document.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{historyDay=b.dataset.day;render()});
  document.querySelectorAll('[data-record]').forEach(b=>b.onclick=()=>{const r=data.records.find(x=>x.id===b.dataset.record);selected=TEMPLATES[r.workout]?r.workout:'Chest';workoutDate=r.date;editing={name:r.exercise,fromHistory:r};page='today';render()});
  document.querySelectorAll('[data-delete-id]').forEach(b=>b.onclick=()=>deleteExercise(b.dataset.deleteId));
+ document.querySelectorAll('[data-delete-workout]').forEach(b=>b.onclick=()=>deleteWorkout(historyDay,b.dataset.deleteWorkout));
+ document.querySelectorAll('[data-delete-set]').forEach(b=>b.onclick=()=>deleteSet(b.dataset.deleteSet,Number(b.dataset.setIndex)));
+
  $('jsonExport').onclick=()=>download('liftlog-backup.json',JSON.stringify(data,null,2),'application/json');
  $('csvExport').onclick=()=>download('liftlog-history.csv',['date,workout,exercise,weight,unit,reps,notes',...data.records.map(r=>[r.date,r.workout,r.exercise,r.weight,r.unit,r.reps,r.notes].map(v=>'"'+String(v||'').replaceAll('"','""')+'"').join(','))].join('\n'),'text/csv')
+}
+function recordSets(record){
+ if(Array.isArray(record.sets)&&record.sets.length)return record.sets.map(s=>({weight:String(s.weight??''),reps:Number(s.reps??0)}));
+ const reps=String(record.reps||'').split('/');const weights=String(record.weight||'').split(/\s*\/\s*/);
+ return reps.map((rep,i)=>({weight:weights[i]??weights[0]??'',reps:Number(rep)||0}));
+}
+function markDeleted(ids){
+ const stamp=new Date().toISOString();if(!data.tombstones||typeof data.tombstones!=='object')data.tombstones={};
+ const idSet=new Set(ids);for(const id of idSet)data.tombstones[id]={id,deleted:true,updated_at:stamp};
+ data.records=data.records.filter(r=>!idSet.has(r.id));store();render();
+}
+function deleteWorkout(date,workout){
+ const items=data.records.filter(r=>r.date===date&&(r.workout||'')===workout);
+ if(!items.length)return;
+ if(!confirm(`Delete the entire ${workout||'uncategorized'} workout on ${date}? This removes ${items.length} exercises and all their sets from every synced device.`))return;
+ markDeleted(items.map(r=>r.id));
+}
+function deleteSet(id,index){
+ const record=data.records.find(r=>r.id===id);if(!record)return;
+ const sets=recordSets(record);if(index<0||index>=sets.length)return;
+ if(!confirm(`Delete set ${index+1} from ${record.exercise} on ${record.date}? This change will sync to your devices.`))return;
+ if(sets.length===1){markDeleted([id]);return;}
+ sets.splice(index,1);record.sets=sets;record.reps=sets.map(s=>s.reps).join('/');
+ record.weight=sets.every(s=>s.weight===sets[0].weight)?sets[0].weight:sets.map(s=>s.weight).join(' / ');
+ record.updated_at=new Date().toISOString();store();render();
 }
 function deleteExercise(id){
  const record=data.records.find(r=>r.id===id);if(!record)return;

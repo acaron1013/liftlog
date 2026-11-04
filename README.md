@@ -1,10 +1,5 @@
-LiftLog v4.22 — flexible exercise logging, history deletion and pending-workout rotation.
-Deploy index.html, sw.js and the full assets directory to the existing GitHub Pages repository.
-Changes:
-- Log any exercise from Library > exercise detail > Log this exercise.
-- Add exercise from Today's workout, opening the library.
-- Delete individual exercise records from History after confirmation.
-- Deletions synchronize using tombstones (deleted rows remain in Supabase to prevent reappearance; filter payload->>'deleted' when counting active records).
-- Pending-workout recommendation tracks outstanding cycle categories and ignores manually added extras.
-- Existing localStorage key, Supabase table, 85 library entries and images retained.
-Backup local history before deploying. Verify deletion and edit synchronization on both devices before relying on them.
+LiftLog v4.23 — delete workouts, exercises and sets from History.
+Delete workout: groups all records with the same date and workout type; deleting removes all matching exercises.
+Delete exercise: marks its cloud record deleted.
+Delete set: updates the parent exercise and syncs it; deleting its last set deletes the exercise.
+Back up first. Sync deletions via tombstones. If multiple sessions of the same workout type are logged on one day, they are treated as one group.
