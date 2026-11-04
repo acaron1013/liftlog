@@ -10,5 +10,3 @@ Export a LiftLog backup first. Upload `index.html`, `sw.js`, and `assets/` to Gi
 
 ## v4.32
 Replaces Machine Biceps Curl illustration with the approved two-position dark-gym artwork. Bumps offline cache to refresh image. No data or database changes.
-
-
