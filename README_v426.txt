@@ -1,0 +1,1 @@
+LiftLog v4.26 - Weight unit selector automatically stores kg/lb on each exercise record and each set inherits that unit. Numeric-only weight inputs. Switching kg/lb converts numeric entered weights; existing ambiguous historical entries are not guessed or rewritten. No Supabase schema changes required.

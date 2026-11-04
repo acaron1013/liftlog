@@ -6,3 +6,7 @@ Export includes workouts, sets, rest days, and training goals, but excludes API 
 
 ## Deploy
 Export a LiftLog backup first. Upload `index.html`, `sw.js`, and `assets/` to GitHub Pages. Confirm `index.html` has a fresh commit. Sign in, wait for cloud sync, and use Settings & Sync > Analyze with ChatGPT.
+
+
+## v4.32
+Replaces Machine Biceps Curl illustration with the approved two-position dark-gym artwork. Bumps offline cache to refresh image. No data or database changes.

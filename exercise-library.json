@@ -399,6 +399,13 @@
     "equipment": "dumbbells"
   },
   {
+    "name": "Machine biceps curl",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "machine"
+  },
+  {
     "name": "Preacher curl machine",
     "category": "Shoulders & Arms",
     "image": "assets/exercises/preacher-curl-machine.webp",
