@@ -1,0 +1,802 @@
+[
+  {
+    "name": "Lat pulldown",
+    "category": "Back",
+    "image": "assets/exercises/lat-pulldown.webp",
+    "current": true,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/lat-pulldown.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Lat pulldown using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Seated cable row",
+    "category": "Back",
+    "image": null,
+    "current": true,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/seated-cable-row.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Seated cable row using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "DB reverse fly",
+    "category": "Back",
+    "image": null,
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/db-reverse-fly.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating DB reverse fly using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Rear delt machine",
+    "category": "Back",
+    "image": null,
+    "current": true,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/rear-delt-machine.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Rear delt machine using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Single-arm DB row",
+    "category": "Back",
+    "image": null,
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/single-arm-db-row.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Single-arm DB row using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Machine row",
+    "category": "Back",
+    "image": null,
+    "current": true,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/machine-row.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Machine row using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Neutral-grip lat pulldown",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/neutral-grip-lat-pulldown.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Neutral-grip lat pulldown using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Close-grip lat pulldown",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/close-grip-lat-pulldown.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Close-grip lat pulldown using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Assisted pull-up",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/assisted-pull-up.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Assisted pull-up using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Pull-up",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/pull-up.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Pull-up using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Chest-supported DB row",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/chest-supported-db-row.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Chest-supported DB row using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Chest-supported machine row",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/chest-supported-machine-row.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Chest-supported machine row using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Bent-over DB row",
+    "category": "Back",
+    "image": "assets/exercises/bent-over-db-row.webp",
+    "current": false,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/bent-over-db-row.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Bent-over DB row using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Bent-over barbell row",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/bent-over-barbell-row.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Bent-over barbell row using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "T-bar row",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/t-bar-row.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating T-bar row using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Straight-arm cable pulldown",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/straight-arm-cable-pulldown.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Straight-arm cable pulldown using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Face pull",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/face-pull.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Face pull using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Cable reverse fly",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/cable-reverse-fly.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Cable reverse fly using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Back extension",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/back-extension.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Back extension using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Single-arm cable row",
+    "category": "Back",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/single-arm-cable-row.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Single-arm cable row using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Goblet squat",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": true,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/goblet-squat.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Goblet squat using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Hip thrust machine",
+    "category": "Legs & Glutes",
+    "image": "assets/exercises/hip-thrust-machine.webp",
+    "current": true,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/hip-thrust-machine.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Hip thrust machine using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Reverse lunges",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": true,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/reverse-lunges.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Reverse lunges using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Seated leg curl",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": true,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/seated-leg-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Seated leg curl using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Leg extension",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": true,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/leg-extension.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Leg extension using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Leg press",
+    "category": "Legs & Glutes",
+    "image": "assets/exercises/leg-press.webp",
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/leg-press.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Leg press using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Hack squat machine",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/hack-squat-machine.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Hack squat machine using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Smith machine squat",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/smith-machine-squat.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Smith machine squat using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Barbell back squat",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/barbell-back-squat.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Barbell back squat using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Dumbbell squat",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/dumbbell-squat.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Dumbbell squat using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Bulgarian split squat",
+    "category": "Legs & Glutes",
+    "image": "assets/exercises/bulgarian-split-squat.webp",
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/bulgarian-split-squat.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Bulgarian split squat using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Walking lunge",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/walking-lunge.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Walking lunge using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Forward lunge",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/forward-lunge.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Forward lunge using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Step-up",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/step-up.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Step-up using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Barbell hip thrust",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/barbell-hip-thrust.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Barbell hip thrust using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "DB glute bridge",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/db-glute-bridge.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating DB glute bridge using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Lying leg curl",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/lying-leg-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Lying leg curl using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Standing single-leg curl",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/standing-single-leg-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Standing single-leg curl using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Hip abduction machine",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/hip-abduction-machine.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Hip abduction machine using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Cable glute kickback",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/cable-glute-kickback.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Cable glute kickback using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Sumo squat",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/sumo-squat.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Sumo squat using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Single-leg leg press",
+    "category": "Legs & Glutes",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/single-leg-leg-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Single-leg leg press using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "DB shoulder press",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/db-shoulder-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating DB shoulder press using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "DB biceps curl",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/db-biceps-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating DB biceps curl using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "DB lateral raise",
+    "category": "Shoulders & Arms",
+    "image": "assets/exercises/db-lateral-raise.webp",
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/db-lateral-raise.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating DB lateral raise using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "DB overhead triceps extension",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/db-overhead-triceps-extension.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating DB overhead triceps extension using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "DB hammer curl",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/db-hammer-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating DB hammer curl using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Cable triceps pushdown",
+    "category": "Shoulders & Arms",
+    "image": "assets/exercises/cable-triceps-pushdown.webp",
+    "current": true,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/cable-triceps-pushdown.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Cable triceps pushdown using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Machine shoulder press",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/machine-shoulder-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Machine shoulder press using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Arnold press",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/arnold-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Arnold press using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Standing DB shoulder press",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/standing-db-shoulder-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Standing DB shoulder press using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Cable lateral raise",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/cable-lateral-raise.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Cable lateral raise using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Machine lateral raise",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/machine-lateral-raise.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Machine lateral raise using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Reverse pec deck",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/reverse-pec-deck.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Reverse pec deck using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Seated DB reverse fly",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/seated-db-reverse-fly.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Seated DB reverse fly using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "EZ-bar biceps curl",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/ez-bar-biceps-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating EZ-bar biceps curl using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Incline DB curl",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/incline-db-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Incline DB curl using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Preacher curl machine",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/preacher-curl-machine.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Preacher curl machine using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Cable biceps curl",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/cable-biceps-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Cable biceps curl using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Rope hammer curl",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/rope-hammer-curl.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Rope hammer curl using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Overhead cable triceps extension",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/overhead-cable-triceps-extension.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Overhead cable triceps extension using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Rope triceps pushdown",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/rope-triceps-pushdown.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Rope triceps pushdown using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Single-arm cable triceps extension",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/single-arm-cable-triceps-extension.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Single-arm cable triceps extension using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Assisted dip",
+    "category": "Shoulders & Arms",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/assisted-dip.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Assisted dip using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Incline DB press",
+    "category": "Chest",
+    "image": "assets/exercises/incline-db-press.webp",
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/incline-db-press.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Incline DB press using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Flat DB press",
+    "category": "Chest",
+    "image": null,
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/flat-db-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Flat DB press using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Incline DB fly",
+    "category": "Chest",
+    "image": null,
+    "current": true,
+    "equipment": "dumbbells",
+    "proposed_image": "assets/exercises/incline-db-fly.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Incline DB fly using correct dumbbells equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Machine chest fly",
+    "category": "Chest",
+    "image": null,
+    "current": true,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/machine-chest-fly.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Machine chest fly using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Chest press machine",
+    "category": "Chest",
+    "image": null,
+    "current": true,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/chest-press-machine.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Chest press machine using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Flat barbell bench press",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/flat-barbell-bench-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Flat barbell bench press using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Incline barbell bench press",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/incline-barbell-bench-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Incline barbell bench press using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Incline chest press machine",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/incline-chest-press-machine.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Incline chest press machine using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Decline chest press machine",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/decline-chest-press-machine.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Decline chest press machine using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Smith machine bench press",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "machine",
+    "proposed_image": "assets/exercises/smith-machine-bench-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Smith machine bench press using correct machine equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Cable chest fly",
+    "category": "Chest",
+    "image": "assets/exercises/cable-chest-fly.webp",
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/cable-chest-fly.webp",
+    "asset_status": "existing_preview_unverified",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Cable chest fly using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Low-to-high cable fly",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/low-to-high-cable-fly.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Low-to-high cable fly using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "High-to-low cable fly",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/high-to-low-cable-fly.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating High-to-low cable fly using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Push-up",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/push-up.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Push-up using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Assisted chest dip",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "varies",
+    "proposed_image": "assets/exercises/assisted-chest-dip.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Assisted chest dip using correct varies equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  },
+  {
+    "name": "Single-arm cable chest press",
+    "category": "Chest",
+    "image": null,
+    "current": false,
+    "equipment": "cable",
+    "proposed_image": "assets/exercises/single-arm-cable-chest-press.webp",
+    "asset_status": "needs_generation",
+    "generation_brief": "Single standalone realistic fitness exercise reference photo, no text, no UI, no collage. Adult athletic male with short dark hair, black sleeveless shirt, charcoal shorts, modern gym, soft directional lighting. Clearly demonstrating Single-arm cable chest press using correct cable equipment, anatomically plausible position, full equipment visible, unobstructed joints and hands, landscape 4:3 composition. One exercise only. Must be checked for accuracy before publishing."
+  }
+]
