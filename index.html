@@ -10,7 +10,7 @@
 .photo-placeholder span{font-size:24px}.photo-placeholder small{font-size:10px;line-height:1.2}
 .photo-missing{display:grid;place-items:center;width:70px;height:76px;background:#222b38;border-radius:12px}
 @media(max-width:430px){.photo-hero-grid .exercise-hero{height:190px}}
-</style><style>.library-filters{display:flex;gap:6px;overflow:auto;padding:12px 0}.library-filters button{white-space:nowrap}.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.library-item{display:flex;flex-direction:column;gap:8px;text-align:left;overflow:hidden;min-width:0}.library-item .exercise-thumb,.library-item .photo-placeholder{width:100%;height:118px;object-fit:cover}.library-item strong{display:block;font-size:13px}.library-item small{display:block;font-size:11px;color:#b9bac8;margin-top:4px}.library-item .photo-placeholder small{font-size:9px}@media(min-width:650px){.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}</style></head><body><main class="wrap"><div class="head"><div class="logo">Lift<b>Log</b> <span class="small muted">v4.27 • History Unit Corrections</span></div><div id="sync" class="status">Local mode</div></div><div id="error"></div><nav class="tabs" id="nav"><button data-page="today" class="active">Today</button><button data-page="history">History</button><button data-page="library">Library</button><button data-page="settings">Settings & Sync</button></nav><section id="today"></section><section id="history" class="hidden"></section><section id="library" class="hidden"></section><section id="settings" class="hidden"></section></main><script>
+</style><style>.library-filters{display:flex;gap:6px;overflow:auto;padding:12px 0}.library-filters button{white-space:nowrap}.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.library-item{display:flex;flex-direction:column;gap:8px;text-align:left;overflow:hidden;min-width:0}.library-item .exercise-thumb,.library-item .photo-placeholder{width:100%;height:118px;object-fit:cover}.library-item strong{display:block;font-size:13px}.library-item small{display:block;font-size:11px;color:#b9bac8;margin-top:4px}.library-item .photo-placeholder small{font-size:9px}@media(min-width:650px){.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}</style></head><body><main class="wrap"><div class="head"><div class="logo">Lift<b>Log</b> <span class="small muted">v4.28 • History Unit Corrections</span></div><div id="sync" class="status">Local mode</div></div><div id="error"></div><nav class="tabs" id="nav"><button data-page="today" class="active">Today</button><button data-page="history">History</button><button data-page="library">Library</button><button data-page="settings">Settings & Sync</button></nav><section id="today"></section><section id="history" class="hidden"></section><section id="library" class="hidden"></section><section id="settings" class="hidden"></section></main><script>
 'use strict';
 const SEED=[];
 const TEMPLATES={
@@ -212,7 +212,7 @@ function chatGPTPrompt(){const x=chatGPTAnalysisData();return `Please analyze my
 function downloadChatGPTExport(){const x=chatGPTAnalysisData();download('liftlog-chatgpt-analysis-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(x,null,2),'application/json')}
 async function copyChatGPTPrompt(){try{await navigator.clipboard.writeText(chatGPTPrompt());alert('Analysis prompt copied. Upload the JSON export to ChatGPT and paste the prompt.')}catch(e){window.prompt('Copy this analysis prompt:',chatGPTPrompt())}}
 
-// v4.27: user-reviewed, idempotent historical unit reconciliation.
+// v4.28: user-reviewed, idempotent historical unit reconciliation.
 // Only the unit label changes; weights, sets, reps, notes and IDs remain untouched.
 const UNIT_REVIEW_V427=[
  ['2026-10-25','DB reverse fly','import-92','Original notes: kg per dumbbell'],
@@ -234,10 +234,10 @@ function unitReviewRows(){return UNIT_REVIEW_V427.map(([date,name,id,reason])=>{
  return {date,name,id,reason,record,ambiguous:candidates.length>1&&!candidates.some(r=>r.id===id)};
 })}
 function renderUnitReview(){
- const rows=unitReviewRows(), changes=rows.filter(x=>x.record&&!x.ambiguous&&x.record.unit!=='kg');
+ const rows=unitReviewRows(), changes=rows.filter(x=>x.record&&!x.ambiguous&&(x.record.unit!=='kg'||(x.date==='2026-11-04'&&x.name==='Machine shoulder press'&&x.record.workout!=='Shoulders & Arms')));
  const missing=rows.filter(x=>!x.record||x.ambiguous);
  const items=rows.map(x=>`<div class="history"><strong>${esc(x.date)} · ${esc(x.name)}</strong><br><span class="small muted">${x.ambiguous?'Multiple matches: manual review required':!x.record?'Not found in this device’s synced history':esc(String(x.record.unit||'missing')+' → kg'+(x.record.unit==='kg'?' (already correct)':''))} · ${esc(x.reason)}</span></div>`).join('');
- $('unitReview').innerHTML=`<h2>Historical unit corrections · v4.27</h2><p class="small muted">Review the confirmed Oct 25 and Nov 4 kg entries. This updates <strong>unit labels only</strong>—not weights, reps, sets or notes. Approximate values stay approximate. Changes sync to your account.</p>${items}<p class="small muted">${changes.length} correction(s) needed · ${rows.length-changes.length-missing.length} already correct · ${missing.length} missing/ambiguous</p><button id="applyUnitCorrections" class="primary" ${!session||!syncReady||syncBusy||!changes.length?'disabled':''}>Review & apply ${changes.length} correction(s)</button><p class="small muted">${!session||!syncReady?'Sign in and wait for Cloud synced before applying.':''} A JSON backup downloads before any change. You will be asked to confirm.</p>`;
+ $('unitReview').innerHTML=`<h2>Historical record corrections · v4.28</h2><p class="small muted">Review confirmed unit corrections and the Nov 4 machine shoulder press category correction. Weights, reps, sets, notes and IDs remain unchanged. Changes sync to your account.</p>${items}<p class="small muted">${changes.length} correction(s) needed · ${rows.length-changes.length-missing.length} already correct · ${missing.length} missing/ambiguous</p><button id="applyUnitCorrections" class="primary" ${!session||!syncReady||syncBusy||!changes.length?'disabled':''}>Review & apply ${changes.length} correction(s)</button><p class="small muted">${!session||!syncReady?'Sign in and wait for Cloud synced before applying.':''} A JSON backup downloads before any change. You will be asked to confirm.</p>`;
  $('applyUnitCorrections').onclick=applyUnitCorrections;
 }
 async function applyUnitCorrections(){
@@ -245,17 +245,17 @@ async function applyUnitCorrections(){
  try{
   if(!session||!syncReady||syncBusy)throw Error('Sign in and wait for cloud synchronization to finish first.');
   await runSync(true); // Refresh from cloud before editing any historical record.
-  const rows=unitReviewRows();const changes=rows.filter(x=>x.record&&!x.ambiguous&&x.record.unit!=='kg');
+  const rows=unitReviewRows();const changes=rows.filter(x=>x.record&&!x.ambiguous&&(x.record.unit!=='kg'||(x.date==='2026-11-04'&&x.name==='Machine shoulder press'&&x.record.workout!=='Shoulders & Arms')));
   if(!changes.length){render();alert('No corrections needed.');return}
-  const details=changes.map(x=>`${x.date} ${x.name}: ${x.record.unit||'(missing)'} → kg`).join('\n');
-  if(!confirm(`Apply ${changes.length} confirmed unit correction(s)?\n\n${details}\n\nOnly unit labels change. A backup downloads first. Your changes will sync to other signed-in devices.`)){render();return}
+  const details=changes.map(x=>`${x.date} ${x.name}: ${x.record.unit||'(missing)'} → kg${x.date==='2026-11-04'&&x.name==='Machine shoulder press'?' · category: '+x.record.workout+' → Shoulders & Arms':''}`).join('\n');
+  if(!confirm(`Apply ${changes.length} confirmed historical correction(s)?\n\n${details}\n\nOnly confirmed unit/category labels change. A backup downloads first. Your changes will sync to other signed-in devices.`)){render();return}
   download('liftlog-before-unit-corrections-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(data,null,2),'application/json');
   const when=new Date().toISOString();if(!Array.isArray(data.unitCorrectionAudit))data.unitCorrectionAudit=[];
-  for(const x of changes){const r=x.record;const oldUnit=r.unit??null;r.unit='kg';r.updated_at=when;
-   data.unitCorrectionAudit.push({recordId:r.id,date:r.date,exercise:r.exercise,oldUnit,newUnit:'kg',reason:x.reason,appliedAt:when,release:'v4.27'});
+  for(const x of changes){const r=x.record;const oldUnit=r.unit??null;const oldWorkout=r.workout; r.unit='kg';if(x.date==='2026-11-04'&&x.name==='Machine shoulder press')r.workout='Shoulders & Arms';r.updated_at=when;
+   data.unitCorrectionAudit.push({recordId:r.id,date:r.date,exercise:r.exercise,oldUnit,newUnit:'kg',oldWorkout,newWorkout:r.workout,reason:x.reason,appliedAt:when,release:'v4.28'});
   }
   store();await runSync(true);
-  alert(`Applied and synced ${changes.length} unit correction(s). Your original backup has been downloaded.`);
+  alert(`Applied and synced ${changes.length} historical correction(s). Your original backup has been downloaded.`);
   render();
  }catch(e){alertErr(e);render();}
 }
