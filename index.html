@@ -10,7 +10,7 @@
 .photo-placeholder span{font-size:24px}.photo-placeholder small{font-size:10px;line-height:1.2}
 .photo-missing{display:grid;place-items:center;width:70px;height:76px;background:#222b38;border-radius:12px}
 @media(max-width:430px){.photo-hero-grid .exercise-hero{height:190px}}
-</style><style>.library-filters{display:flex;gap:6px;overflow:auto;padding:12px 0}.library-filters button{white-space:nowrap}.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.library-item{display:flex;flex-direction:column;gap:8px;text-align:left;overflow:hidden;min-width:0}.library-item .exercise-thumb,.library-item .photo-placeholder{width:100%;height:118px;object-fit:cover}.library-item strong{display:block;font-size:13px}.library-item small{display:block;font-size:11px;color:#b9bac8;margin-top:4px}.library-item .photo-placeholder small{font-size:9px}@media(min-width:650px){.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}</style></head><body><main class="wrap"><div class="head"><div class="logo">Lift<b>Log</b> <span class="small muted">v4.28 • History Unit Corrections</span></div><div id="sync" class="status">Local mode</div></div><div id="error"></div><nav class="tabs" id="nav"><button data-page="today" class="active">Today</button><button data-page="history">History</button><button data-page="library">Library</button><button data-page="settings">Settings & Sync</button></nav><section id="today"></section><section id="history" class="hidden"></section><section id="library" class="hidden"></section><section id="settings" class="hidden"></section></main><script>
+</style><style>.library-filters{display:flex;gap:6px;overflow:auto;padding:12px 0}.library-filters button{white-space:nowrap}.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.library-item{display:flex;flex-direction:column;gap:8px;text-align:left;overflow:hidden;min-width:0}.library-item .exercise-thumb,.library-item .photo-placeholder{width:100%;height:118px;object-fit:cover}.library-item strong{display:block;font-size:13px}.library-item small{display:block;font-size:11px;color:#b9bac8;margin-top:4px}.library-item .photo-placeholder small{font-size:9px}@media(min-width:650px){.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}</style></head><body><main class="wrap"><div class="head"><div class="logo">Lift<b>Log</b> <span class="small muted">v4.35 • Strength Progression Fix</span></div><div id="sync" class="status">Local mode</div></div><div id="error"></div><nav class="tabs" id="nav"><button data-page="today" class="active">Today</button><button data-page="history">History</button><button data-page="library">Library</button><button data-page="settings">Settings & Sync</button></nav><section id="today"></section><section id="history" class="hidden"></section><section id="library" class="hidden"></section><section id="settings" class="hidden"></section></main><script>
 'use strict';
 const SEED=[];
 const TEMPLATES={
@@ -60,13 +60,63 @@ function workoutStyle(workout){
 
 function rule(name){const n=name.toLowerCase();if(/lateral raise|reverse fly|rear delt|fly|curl|pushdown|extension/.test(n))return {min:10,max:15};if(/lunge/.test(n))return {min:10,max:16};return {min:8,max:12}}
 // v4.34: read-only, exercise-specific progression. Never infer ambiguous units or compare unrelated machines.
-function numericSetWeight(v){const m=String(v??'').trim().match(/^(\d+(?:\.\d+)?)\s*(kg|lbs?|lb)?$/i);return m?{value:Number(m[1]),explicit:m[2]?(/^kg$/i.test(m[2])?'kg':'lb'):null}:null}
-function comparableSet(r,i){const unit=r?.unit;if(!['kg','lb','bw'].includes(unit))return null;const raw=r?.sets?.[i]?.weight??(r?.sets?.length?null:r?.weight);if(unit==='bw')return {value:0,unit:'bw'};const parsed=numericSetWeight(raw);if(!parsed||parsed.value<=0||parsed.explicit&&parsed.explicit!==unit)return null;return {value:parsed.value,unit}}
-function exerciseSessions(name){return data.records.filter(r=>r.exercise.toLowerCase()===name.toLowerCase()).sort((a,b)=>b.date.localeCompare(a.date)||String(b.updated_at||'').localeCompare(String(a.updated_at||'')))}
-function unitValue(value,from,to){if(from===to)return value;if(from==='kg'&&to==='lb')return value*2.2046226218;if(from==='lb'&&to==='kg')return value/2.2046226218;return null}
-function recordSnapshot(r){if(!r)return null;const reps=(r.reps||'').split('/').map(Number);if(!reps.length||reps.some(x=>!Number.isInteger(x)||x<0))return null;const sets=reps.map((reps,i)=>({reps,load:comparableSet(r,i)}));return {date:r.date,unit:r.unit,sets,valid:sets.every(x=>x.load),notes:r.notes||''}}
-function progression(r,n){const rules=rule(r?.exercise||editing?.name||'');if(!r||!r.reps)return {weight:'',reps:Array(n).fill(rules.min),label:`No prior comparable performance. Start with a manageable weight and ${rules.min}–${rules.max} controlled reps.`};const snap=recordSnapshot(r);if(!snap||!snap.valid||!snap.sets.length)return {weight:'',reps:Array(n).fill(rules.min),label:'Previous weight is ambiguous or missing a reliable unit. Review the last log; no automatic load recommendation.'};const same=snap.sets.every(x=>x.load.value===snap.sets[0].load.value);const reps=snap.sets.map(x=>x.reps);const unit=snap.unit;const weight=same?(unit==='bw'?'':String(snap.sets[0].load.value)):'';const allTop=reps.length>=n&&reps.slice(0,n).every(x=>x>=rules.max);const target=Array.from({length:n},(_,i)=>Math.min(rules.max,(reps[i]??rules.min)+1));if(!same)return {weight:'',reps:target,label:`Previous sets used different loads. Repeat or improve your last performance; enter each set's weight individually.`};if(allTop&&unit!=='bw')return {weight, reps:Array(n).fill(rules.min),label:`Ready to consider a small load increase from ${weight} ${unit} after confirming clean form and available equipment. Suggested starting reps: ${rules.min}–${rules.max}.`};return {weight,reps:target,label:`Aim for ${target.join('/')} reps at ${unit==='bw'?'bodyweight':weight+' '+unit}. Increase load only after every set reaches ${rules.max} with good form.`}}
-function performancePanel(name){const sessions=exerciseSessions(name).slice(0,5);if(!sessions.length)return '<div class="note">No previous performance recorded for this exercise.</div>';const rows=sessions.map(r=>{const snap=recordSnapshot(r);const sets=snap?snap.sets.map(x=>`${x.load?(x.load.unit==='bw'?'BW':x.load.value+' '+x.load.unit):'?'} × ${x.reps}`).join(' · '):'Ambiguous measurements';return `<tr><td>${esc(r.date)}</td><td>${esc(sets)}</td></tr>`}).join('');const valid=sessions.map(recordSnapshot).filter(x=>x?.valid);let trend='Not enough comparable sessions for a trend.';if(valid.length>=2){const first=valid[0],previous=valid[1];if(first.unit===previous.unit&&first.sets.length===previous.sets.length&&first.sets.every((x,i)=>x.load.value===previous.sets[i].load.value)){const a=first.sets.reduce((v,x)=>v+x.reps,0),b=previous.sets.reduce((v,x)=>v+x.reps,0);trend=a>b?`+${a-b} total reps at the same load versus the previous session.`:a<b?`${b-a} fewer total reps at the same load versus the previous session.`:'Same total reps at the same load versus the previous session.'}else trend='Load or equipment may differ; compare reps and technique before inferring strength change.'}return `<div class="card" style="margin:12px 0;background:#10141c"><h3>Previous performance & strength trend</h3><p class="small muted">${esc(trend)}</p><div style="overflow:auto"><table style="width:100%;font-size:12px;text-align:left"><thead><tr><th>Date</th><th>Recorded sets</th></tr></thead><tbody>${rows}</tbody></table></div><p class="small muted">Exercise-specific history only. Machine settings are not standardized across gyms; use the same equipment for reliable comparisons.</p></div>`}
+// v4.35: preserve load context (e.g. 10 kg each) and use per-set data directly.
+function numericSetWeight(v){
+ const m=String(v??'').trim().match(/^(\d+(?:\.\d+)?)\s*(kg|lbs?|lb)?(?:\s+(each|per\s+(?:hand|dumbbell|side)))?$/i);
+ if(!m)return null;
+ return {value:Number(m[1]),explicit:m[2]?(/^kg$/i.test(m[2])?'kg':'lb'):null,perSide:!!m[3]};
+}
+function comparableSet(r,i){
+ const unit=r?.unit;
+ if(!['kg','lb','bw'].includes(unit))return null;
+ const raw=r?.sets?.[i]?.weight??(r?.sets?.length?null:r?.weight);
+ if(unit==='bw')return {value:0,unit:'bw',perSide:false};
+ const parsed=numericSetWeight(raw);
+ if(!parsed||parsed.value<=0||(parsed.explicit&&parsed.explicit!==unit))return null;
+ return {value:parsed.value,unit,perSide:parsed.perSide};
+}
+function exerciseSessions(name){return data.records.filter(r=>String(r.exercise||'').toLowerCase()===name.toLowerCase()).sort((a,b)=>b.date.localeCompare(a.date)||String(b.updated_at||'').localeCompare(String(a.updated_at||'')))}
+function recordSnapshot(r){
+ if(!r)return null;
+ const rawSets=Array.isArray(r.sets)&&r.sets.length?r.sets:null;
+ const reps=rawSets?rawSets.map(x=>Number(x.reps)):(r.reps||'').split('/').map(Number);
+ if(!reps.length||reps.some(x=>!Number.isInteger(x)||x<0))return null;
+ const sets=reps.map((reps,i)=>({reps,load:comparableSet(r,i)}));
+ return {date:r.date,unit:r.unit,sets,valid:sets.every(x=>x.load!==null),notes:r.notes||''};
+}
+function sameLoads(a,b){return a.valid&&b.valid&&a.sets.length===b.sets.length&&a.sets.every((x,i)=>{
+ const y=b.sets[i];return x.load.unit===y.load.unit&&x.load.value===y.load.value&&x.load.perSide===y.load.perSide;
+})}
+function loadLabel(load){return !load?'Weight unavailable':load.unit==='bw'?'BW':`${load.value} ${load.unit}${load.perSide?' each':''}`}
+function progression(r,n){
+ const rules=rule(r?.exercise||editing?.name||'');
+ if(!r)return {weight:'',reps:Array(n).fill(rules.min),label:`No previous performance. Start with a manageable weight and ${rules.min}–${rules.max} controlled reps.`};
+ const snap=recordSnapshot(r);
+ if(!snap||!snap.valid||!snap.sets.length)return {weight:'',reps:Array(n).fill(rules.min),label:'Previous weight is ambiguous or missing a reliable unit. Review the last log; no automatic load recommendation.'};
+ const same=snap.sets.every(x=>x.load.value===snap.sets[0].load.value&&x.load.perSide===snap.sets[0].load.perSide);
+ const weight=same&&snap.unit!=='bw'?String(snap.sets[0].load.value):'';
+ const allTop=snap.sets.length>=n&&snap.sets.slice(0,n).every(x=>x.reps>=rules.max);
+ const target=Array.from({length:n},(_,i)=>Math.min(rules.max,(snap.sets[i]?.reps??rules.min)+1));
+ if(!same)return {weight:'',reps:target,label:'Previous sets used different loads. Repeat or improve your last performance; enter each set weight individually.'};
+ const label=loadLabel(snap.sets[0].load);
+ if(allTop&&snap.unit!=='bw')return {weight,reps:Array(n).fill(rules.min),label:`Consider a small load increase from ${label} if form and equipment are consistent. Target ${rules.min}–${rules.max} reps.`};
+ return {weight,reps:target,label:`Aim for ${target.join('/')} reps at ${label}. Increase load only after every set reaches ${rules.max} with good form.`};
+}
+function performancePanel(name){
+ const sessions=exerciseSessions(name).slice(0,5);
+ if(!sessions.length)return '<div class="note">No previous performance recorded for this exercise.</div>';
+ const snaps=sessions.map(recordSnapshot);
+ const rows=sessions.map((r,i)=>{const snap=snaps[i];const sets=snap?snap.sets.map(x=>`${loadLabel(x.load)} × ${x.reps}`).join(' · '):'Ambiguous measurements';return `<tr><td>${esc(r.date)}</td><td>${esc(sets)}</td></tr>`}).join('');
+ let trend='Not enough comparable sessions for a trend.';
+ // Compare only the two most recent sessions; never skip ambiguous sessions to fabricate a trend.
+ if(snaps.length>=2){const first=snaps[0],previous=snaps[1];
+  if(first&&previous&&sameLoads(first,previous)){
+   const a=first.sets.reduce((v,x)=>v+x.reps,0),b=previous.sets.reduce((v,x)=>v+x.reps,0);
+   trend=a>b?`+${a-b} total reps at the same load versus the previous session.`:a<b?`${b-a} fewer total reps at the same load versus the previous session.`:'Same total reps at the same load versus the previous session.';
+  }else trend='Loads, units, or per-dumbbell context differ or are unverified; no same-load trend calculated.';
+ }
+ return `<div class="card" style="margin:12px 0;background:#10141c"><h3>Previous performance & strength trend</h3><p class="small muted">${esc(trend)}</p><div style="overflow:auto"><table style="width:100%;font-size:12px;text-align:left"><thead><tr><th>Date</th><th>Recorded sets</th></tr></thead><tbody>${rows}</tbody></table></div><p class="small muted">Exercise-specific history only. Machine settings are not standardized across gyms; use the same equipment for reliable comparisons.</p></div>`;
+}
 function dayWorkouts(){
  const m=new Map();for(const r of data.records){if(!CYCLE.includes(r.workout)||r.manualExtra)continue;const d=m.get(r.date)||new Map();d.set(r.workout,(d.get(r.workout)||0)+1);m.set(r.date,d)}
  return [...m.entries()].sort((a,b)=>a[0].localeCompare(b[0])).map(([date,types])=>({date,workout:[...types].sort((a,b)=>b[1]-a[1])[0][0]}));
@@ -99,7 +149,7 @@ function numericWeight(value){
  const raw=String(value??'').trim();
  if(!raw)return '';
  // Do not reinterpret legacy slash-delimited, numbered-stack, or ambiguous entries.
- const match=raw.match(/^([0-9]+(?:\.[0-9]+)?)\s*(kg|lbs?|lb)?$/i);
+ const match=raw.match(/^([0-9]+(?:\.[0-9]+)?)\s*(kg|lbs?|lb)?(?:\s+(?:each|per\s+(?:hand|dumbbell|side)))?$/i);
  return match?match[1]:raw;
 }
 function selectedWeightUnit(record){
